@@ -24,13 +24,14 @@ struct node * sortLinkedList(struct node *head) {
 		struct node* j;
 		for (i = head; i != NULL; i = i->next){
 			for (j = i->next; j != NULL; j = j->next){
-				if (i->num > j->num){
+				if ((i->num) > (j->num)){
 					int temp = i->num;
 					i->num = j->num;
 					j->num = temp;
 				}
 			}
 		}
+		return head;
 	}
 	return NULL;
 }
